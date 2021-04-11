@@ -199,6 +199,7 @@ if not other_liquidity_raw.isdigit():
 other_liquidity = int(other_liquidity_raw)
 starting_dollars = (checking_savings + investments + mattress + pawned + trust_fund + retirement +
                     kid_ed + spouse_life + house + car + other_motor + real_estate + businesses + other_liquidity)
+
 print("\nPart One completed!")
 
 
@@ -214,7 +215,7 @@ major_divider()
 
 # Step 2 Spend money. Print starting amount.
 print(f"Your total liquid assets are: ${starting_dollars}.")
-print("\nNow it's time to make some amazing investments./n")
+print("\nNow it's time to make some amazing investments.")
 
 # Create dollars_left variable, and set it to starting_dollars.
 dollars_left = starting_dollars
@@ -232,8 +233,8 @@ def notify_dollars_left():
 peas_country_cost = 1200000000000000
 
 if dollars_left >= 1200000000000000:
-    print(""""\nWith your current assets, you may begin with the following options.
-    Each is a bargain at 1.2 trillion dollars.
+    print("""\nWith your current assets, you may begin with the following options.\n
+Each is a bargain at 1.2 trillion dollars.
     1. Invest in the World Peas Fund to solve world hunger for a few years.
        It's also tax-deductible, so there's that.
     2. Buy a politically unstable but very large country, name currently undisclosed for
@@ -339,12 +340,248 @@ if dollars_left >= 100000000:
         stuff_list.append('art')
 
     dollars_left = dollars_left - art_jet_cost
+
+    # Ash's contribution to Part 2
+    choice = 'nothing'
+
+    if dollars_left >= 50000000:
+        while choice == 'nothing':
+            choice = str(input('''\nChoose between the following options.
+
+        1. Commission a genetics laboratory to create pigeons the size of pelicans. $33110000
+        2. Hold a flag referendum to change the United States flag. $31250010
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 50,000,000 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 33110000
+            stuff_list.append('pigeons')
+        elif '2' in choice:
+            dollars_left -= 31250010
+            stuff_list.append('flag')
+        elif '3' in choice:
+            print('Not a fan? Alright, moving on.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 16000000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. Lick Fork, a quaint town in West Virginia. $12500500
+        2. A car that, upon honking the horn, uses the rest of the gas to shoot off like a rocket. $14300050
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 16,890,000 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 12500500
+            stuff_list.append('Lick Fork')
+        elif '2' in choice:
+            dollars_left -= 14300050
+            stuff_list.append('rocket car')
+        elif '3' in choice:
+            dollars_left -= 12500500
+            stuff_list.append('Lick Fork')
+            print("Sorry, you're buying Lick Fork.")
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 2000000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. An insane mansion in the middle of nowhere in Wyoming. $1757000
+        2. A flip phone that has Oprah on speed dial. $1525000
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 2,589,950 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 1757000
+            stuff_list.append('mansion')
+        elif '2' in choice:
+            dollars_left -= 1525000
+            stuff_list.append('Oprah')
+        elif '3' in choice:
+            print('Feeling cheap today! No problem.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if 'mansion' in stuff_list:
+        while choice == 'nothing':
+            choice = str(input('''Would you like to purchase home insurance for $10000?
+
+        1. Yes
+        2. No
+    '''))
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 10000
+            stuff_list.append('insurance')
+        if '2' in choice:
+            print('Okay, your choice.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 800000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. Some sick spy gear. $510025
+        2. Commission Christian Louboutin to create antiheels, where the toe is higher than the heel. $525000
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 832,950 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 510025
+            stuff_list.append('spy gear')
+        elif '2' in choice:
+            dollars_left -= 525000
+            stuff_list.append('antiheels')
+        elif '3' in choice:
+            print("Look who doesn't know fashion.")
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 290000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. A loud horn to scare fish away from your boat. $150250
+        2. A strangely life-like model of Gibby from iCarly. $175500
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 307,950 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 150250
+            stuff_list.append('horn')
+        elif '2' in choice:
+            dollars_left -= 175500
+            stuff_list.append('Gibby')
+        elif '3' in choice:
+            print('Yeah, I understand.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 2000000:
+        while choice == 'nothing':
+            choice = str(input('''Perhaps a donation?
+
+    Choose between the following options.
+
+        1. Donate $1,000,000 to wildlife conservation.
+        2. Donate $1,000,000 to starving children.
+        3. I hate charity.
+
+    Which donation would you like to make?
+    '''))
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 1000000
+            stuff_list.append('wildlife')
+        elif '2' in choice:
+            dollars_left -= 1000000
+            stuff_list.append('children')
+        elif '3' in choice:
+            stuff_list.append('cheap')
+            print('Wow. Just you wait, cheapskate.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 100000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. A ring holder that screeches "PRECIOUSSSS" when given a ring. $75250
+        2. A 300 foot long selfie stick. $68500
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 132,450 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 75250
+            stuff_list.append('precious')
+        elif '2' in choice:
+            dollars_left -= 68500
+            stuff_list.append('selfie stick')
+        elif '3' in choice:
+            print('No? Alright, then.')
+            print(' ')
+
+    choice = 'nothing'
+
+    if dollars_left >= 50000:
+        print('You currently have ${}'.format(dollars_left), 'to invest.')
+        while choice == 'nothing':
+            choice = str(input('''Choose between the following options.
+
+        1. A book subscription where one word is sent per week for ease of reading. $35300
+        2. A telescope that has a high quality printed picture of the stars instead of a lens. $37550
+        3. Neither
+
+    Which opportunity would you like to invest in?
+    '''))  # min 57,200 left
+            if '1' not in choice and '2' not in choice and '3' not in choice:
+                choice = 'nothing'
+                print("Invalid choice. Try again.")
+        if '1' in choice:
+            dollars_left -= 35300
+            stuff_list.append('books')
+        elif '2' in choice:
+            dollars_left -= 37550
+            stuff_list.append('telescope')
+        elif '3' in choice:
+            print("Someone isn't a fan of learning.")
+            print(' ')
+
+print("You've finished Part Two!\n")
+
 # Portfolio Summary
-print("""Congratulations! You've finished!\n""")
 major_divider()
-print("PORTFOLIO SUMMARY")
-print(f"\nYou have ${dollars_left} remaining to invest.")
+print("Part Three: PORTFOLIO SUMMARY")
+print("\nCongratulations! You're well on your way to an amazing financial future!")
 print("\nYour personalizied protfolio summary:")
+
+print(f"\nYou have ${dollars_left} remaining to invest.")
+
 # 1.2 trillion options
 if 'peas' in stuff_list:
     print("""\nYou invested in the World Peas Fund to solve world hunger for a few years. People got sick
@@ -395,3 +632,113 @@ highly unlikely.""")
 if 'jet' in stuff_list:
     print("""\nYou purchased a private jet. The good news is everyone survived. The bad news
 is the plane crashed while attempting to take off. You may be facing fines.""")
+
+# Ash's contribution to Part 3
+if 'pigeons' in stuff_list:
+    print('')
+    print('The massive pigeons you decided to create have proven to be slightly '
+          'more of an annoyance than the old pigeons. The amount of pigeon poop '
+          'in public has nearly doubled. But wow those are some large pigeons.')
+if 'flag' in stuff_list:
+    print('')
+    print('You chose to change the United States flag. You are now constantly assaulted '
+          'in public by hicks who feel you have disrespected "Merica" by changing the '
+          'flag. You can hardly go out without being spit on, but others thought it '
+          'was funny, so it was worth it, right?')
+if 'Lick Fork' in stuff_list:
+    print('')
+    print('The town of Lick Fork has grown on you. Sure, the well water tastes a bit '
+          'rusty, and the townfolk seem to be gearing up for a riot with actual '
+          'pitchforks and torches, but the town is just so quaint.')
+if 'rocket car' in stuff_list:
+    dollars_left -= 10000000
+    print('')
+    print('You bought a car that blasts off like a rocket with your remaining gas '
+          'at the honk of a horn. The first time you used the rocket feature, you '
+          'killed many and injured more. The damages were astounding. You ended up '
+          'paying $10 million to those affected by this tragedy. What did you expect? ')
+if 'mansion' in stuff_list and 'insurance' not in stuff_list:
+    print('')
+    print("Since $10000 was too much for you after buying this $1757000 home, "
+          "you went without insurance. Well, the people in a neighboring town "
+          "didn't appreciate your fancy house making them look back, so it was "
+          "torn down in the night with no witnesses to point blame. Should have "
+          "forked over the money for the insurance, huh? ")
+if 'insurance' in stuff_list:
+    print('')
+    dollars_left += 1757000
+    print('The people in a neighboring town to your mansion in Wyoming thought you '
+          'were trying to make them look bad, so your house was mysteriously torn '
+          'down in the night. But you wisely bought insurance so you got your '
+          '$1757000 back, hooray!')
+if 'Oprah' in stuff_list:
+    print('')
+    print('At first Oprah was happy to talk to you about your childhood and how '
+          'to move forward with your life goals. But soon, after your daily calls '
+          'to complain about your day, she found herself feeling rather creeped '
+          'out. She sent an assistant to destroy the flip phone and she changed '
+          'her phone number.')
+if 'spy gear' in stuff_list:
+    print(' ')
+    dollars_left -= 100000
+    print('The U.S. government found your purchase of excessively expensive spy gear '
+          'suspicious, so your gear was seized and you were fined $100000.')
+if 'antiheels' in stuff_list:
+    print('')
+    dollars_left += 11500025
+    print("Some time after you commissioned Christian Louboutin to craft antiheels, "
+          "the trend spread like wildfire. You can't open a magazine these days "
+          "without seeing models breaking their ankles in antiheels. You received "
+          "$11500025 from your investment, so far.")
+if 'horn' in stuff_list:
+    print('')
+    print("You bought a horn that scares fish away from your boat. Well, you certainly "
+          "don't have to worry about sharks, I guess.")
+if 'Gibby' in stuff_list:
+    print('')
+    print('Your strangely life-like model of Gibby from iCarly is a favorite possession '
+          'of yours. The actor who played Gibby liked your instagram post when you '
+          'posted a picture of your model.')
+if 'precious' in stuff_list:
+    print('')
+    dollars_left -= 101570
+    print('Once, when placing a ring in your screeching ring stand, the hand on the ring '
+          'stand grips your finger so tightly that you cannot move. The ring stand '
+          'screeches "THIIIIIIIEEEEF!" When you get to the hospital, doctors are forced '
+          'to remove your third finger. Your hospital bill was $101570.')
+if 'selfie stick' in stuff_list:
+    print('')
+    print("Your 300 foot selfie stick was snatched ten minutes after you started "
+          "using it at DisneyLand. You got some cool drone-like pictures, though.")
+if 'books' in stuff_list:
+    print('')
+    print('The knowledge you have gained from your book subscription has changed your '
+          'life. You read through a lovely self-help book, and now you feel like you '
+          'can tackle whatever challenges come your way.')
+if 'telescope' in stuff_list:
+    print('')
+    print('After some time of using your telescope with a printed picture of the stars '
+          'instead of a lens, you are a master at recognizing constellations. It '
+          'really impresses people when you point them out in the real night sky.')
+if 'wildlife' in stuff_list:
+    print('')
+    print('Your donation to wildlife conservation helped save an endangered species '
+          'of rhinos. The foundation dedicated to saving these rhinos name their '
+          'facility after you. Your heart is warm with the knowledge that you have '
+          'done good in the world.')
+if 'children' in stuff_list:
+    print('')
+    print('You receive photos in the mail of some of the starving children your '
+          'donation helped to feed. The foundation dedicated to dispersing food to '
+          'children in need name their facility after you. Your heart is warm with the '
+          'knowledge that you have done good in the world.')
+if 'cheap' in stuff_list:
+    print('')
+    print('You went on a hunting trip in the wild because you thought it would impress '
+          'others if you shot a lion with a high-powered gun from a distance the lion '
+          'could not even see you from. As you made your way toward the wildlands, you '
+          'hear a whistle from the trees. Thousands of the starving children you chose '
+          'not to donate to emerge. They have white-hot anger in their eyes. The crowd '
+          'parts and a dozen lions stride forward. Before you can react, the head child '
+          'whistles again and the lions rip you to pieces. If only you had compassion '
+          'in your heart, then you might have donated a portion of your stack of cash. ')
