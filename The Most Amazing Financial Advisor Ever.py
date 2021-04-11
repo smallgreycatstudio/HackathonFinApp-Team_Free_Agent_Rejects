@@ -1090,16 +1090,7 @@ if 'children' in stuff_list:
 for x in range(len(stuff_list_cat)):
     print("\n", stuff_list_cat[x][3])
 
-if 'cheap' in stuff_list:
-    print('')
-    print('You went on a hunting trip in the wild because you thought it would impress '
-          'others if you shot a lion with a high-powered gun from a distance the lion '
-          'could not even see you from. As you made your way toward the wildlands, you '
-          'hear a whistle from the trees. Thousands of the starving children you chose '
-          'not to donate to emerge. They have white-hot anger in their eyes. The crowd '
-          'parts and a dozen lions stride forward. Before you can react, the head child '
-          'whistles again and the lions rip you to pieces. If only you had compassion '
-          'in your heart, then you might have donated a portion of your stack of cash. ')
+
 if 'grower' in stuff_list:
     print('')
     print("You were so excited to try out your new lettuce grower but you left"
@@ -1145,3 +1136,13 @@ if 'rock' in stuff_list:
 if 'gum' in stuff_list:
     print("")
     print("Pack of gum was black licorice - flavored. Tasted awful.")
+if 'cheap' in stuff_list:
+    print('')
+    print('You went on a hunting trip in the wild because you thought it would impress '
+          'others if you shot a lion with a high-powered gun from a distance the lion '
+          'could not even see you from. As you made your way toward the wildlands, you '
+          'hear a whistle from the trees. Thousands of the starving children you chose '
+          'not to donate to emerge. They have white-hot anger in their eyes. The crowd '
+          'parts and a dozen lions stride forward. Before you can react, the head child '
+          'whistles again and the lions rip you to pieces. If only you had compassion '
+          'in your heart, then you might have donated a portion of your stack of cash. ')
