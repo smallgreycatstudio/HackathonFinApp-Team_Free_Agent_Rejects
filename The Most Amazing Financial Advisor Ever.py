@@ -572,13 +572,126 @@ if dollars_left >= 100000000:
             print("Someone isn't a fan of learning.")
             print(' ')
 
+# Cat's contribution to Part 2
+stuff_list_cat = []
+
+# lists of things to purchase with data: Title, Amount, Buying Text, Text to Print after
+vacuum = ["Crystal Vacuum", 17000,
+          "The Crystal Ergoripado Vacuum Cleaner! Designed by Lukasz Jemoil this vacuum is "
+          "\ndecorated with 3,730 Swarovski crystals! For the low price of ""$17,000!",
+          "Your overpriced vacuum cleaner broke."]
+cravings_box = ["Cat", 16000, "Buy 3,200 Taco Bell Cravings Boxes for $1600.",
+                "You ate all of the 3,200 taco bell cravings boxes... you did this to yourself."]
+pigeon_milk = ["Pigeon Milk Investment",
+               12000, "$12000 for a majority stock ownership in Greenfield Pigeon Milk Farms!",
+               "The pigeon milk you invested in doesn't end up being as popular as test groups determined, "
+               "you lost your money."]
+doge_coin = ["Doge Coin", 11000, "Invest $11000 dollars into Doge Coin!", "Doge coin is a joke, you lost $16000"]
+time_share = ["Time Share", 8000, "Spend $8000 to buy a time share on a small volcanic island in the Mediterranean.",
+              "Your time share investment went to waste, the volcano erupted and your dreams are washed away in a "
+              "sea of lava"]
+lawn_mower = ["Lawn Mower", 7000, "Purchase a high end ride-on lawn mower for $7000.",
+              "You never used your lawn mower once and your dreams of starting a lawn mowing business slipped "
+              "through your fingers."]
+german_shepard = ["German Shepard", 2700, "Buy an overpriced purebred german shepard for $2700.",
+                  "Your german shepard ran away."]
+beaver_business = ["Beaver Trapping Business", 4000, "Purchase $4000 of equipment to start a beaver trapping business.",
+                   "All of your beaver traps were stolen by beavers to make a dam."]
+airbnb = ["Fancy Airbnb", 1500, "$1500 for a one night stay at a luxury airbnb in the city!",
+          "Your airbnb didn't quite workout as expected... you woke up in a bathtub full of ice missing a kidney."]
+australia = ["Australia Plane Ticket", 2000, "$2000 for a one-way plane ticket to Australia!",
+             "The moment you landed in Australia you got bitten by a venomous snake."]
+racoons = ["Racoons", 800, "Purchase several racoons for $800 to start a petting zoo.",
+           "Your petting zoo business has come to a sudden halt... The racoons bit a child and you are "
+           "now being sued."]
+magical_stick = ["Magical Stick", 900, "Buy a magical stick for $900 from a mysterious stranger who claims it will "
+                 "help you defeat your enemies.", "With the help of your newly purchased magic stick you learned that "
+                 "magic isn't real, you got your butt kicked"]
+fitbit_stocks = ["FitBit Stocks", 600, "Purchase 600 dollars worth of Fit Bit stocks.", "Who even uses Fit Bit "
+                 "anymore? You now owe money for your stocks."]
+carrier_pigeons = ["Carrier Pigeons", 700, "Buy an entire flock of carrier pigeons for $700", "Your neighbor purchased "
+                   "an entire flock of hunting falcons.... your pigeons are all dead."]
+
+
+# function takes in the list containing the item info
+def prompt_user_for_purchase(item1, item2):
+
+    print("Choose between the following options:")
+    print("1.", item1[2])
+    print("2.", item2[2])
+    print("3. eh... I'll pass...")
+
+    user_input = int(input("Make your decision: "))
+    while user_input < 1 or user_input > 3:
+        user_input = int(input("Invalid Selection! Try again: "))
+
+    if user_input == 1:
+        print("Excellent decision!")
+        return item1
+    elif user_input == 2:
+        print("Excellent decision!")
+        return item2
+    else:
+        print("your loss")
+        return 0
+
+
+if dollars_left >= 15000:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(vacuum, cravings_box)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 10000:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(pigeon_milk, doge_coin)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 5000:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(time_share, lawn_mower)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 2500:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(german_shepard, beaver_business)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 1000:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(airbnb, australia)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 750:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(racoons, magical_stick)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
+if dollars_left >= 500:
+    print(f"\nYou currently have ${dollars_left} to invest.")
+    purchase = prompt_user_for_purchase(fitbit_stocks, carrier_pigeons)
+    if purchase != 0:
+        stuff_list_cat.append(purchase)
+        dollars_left = dollars_left - purchase[1]
+
 print("You've finished Part Two!\n")
 
 # Portfolio Summary
 major_divider()
 print("Part Three: PORTFOLIO SUMMARY")
 print("\nCongratulations! You're well on your way to an amazing financial future!")
-print("\nYour personalizied protfolio summary:")
+print("\nYour personalized portfolio summary:")
 
 print(f"\nYou have ${dollars_left} remaining to invest.")
 
@@ -592,7 +705,7 @@ if 'country' in stuff_list:
     print("""\nYou bought a country. There was a military coup, and now the country is a failed state.
 Money remaining: $0.""")
 
-# $50 billiion
+# $50 billion
 if 'football' in stuff_list:
     print("""\nYou invested in the TTIWW, This Time It Will Work Football League. Unfortunately, it didn't.
 Better luck next time. Money left of this investment: $0.""")
@@ -742,3 +855,7 @@ if 'cheap' in stuff_list:
           'parts and a dozen lions stride forward. Before you can react, the head child '
           'whistles again and the lions rip you to pieces. If only you had compassion '
           'in your heart, then you might have donated a portion of your stack of cash. ')
+
+# Cat's contribution to Part 3
+for x in range(len(stuff_list_cat)):
+    print("\n", stuff_list_cat[x][3])
