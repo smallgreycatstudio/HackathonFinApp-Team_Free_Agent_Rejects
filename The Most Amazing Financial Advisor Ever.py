@@ -98,7 +98,7 @@ checking_savings = int(checking_savings_raw)
 
 print("""\nHow much do you have in investment accounts? Please liquidate all your
  stocks, bonds, IRAs, etc, so they will be ready to invest in more amazing options.""")
-investments_raw = input("S ")
+investments_raw = input("$ ")
 if not investments_raw.isdigit():
     print("Invalid entry. Please try again (only numbers)")
     investments_raw = input("$ ")
@@ -106,7 +106,7 @@ investments = int(investments_raw)
 
 print("""\nInclude what you have stashed under the mattress, and be sure to check 
 under chair cushions. Add the amount here (round to nearest dollar.""")
-mattress_raw = input("S ")
+mattress_raw = input("$ ")
 if not mattress_raw.isdigit():
     print("Invalid entry. Please try again (only numbers)")
     mattress_raw = input("$ ")
@@ -684,6 +684,221 @@ if dollars_left >= 500:
     if purchase != 0:
         stuff_list_cat.append(purchase)
         dollars_left = dollars_left - purchase[1]
+if dollars_left >= 0:
+    choice = input('''Choose between the following options.
+
+    1. A lettuce grower. Imagine being able to walk a few steps in the comfort of your home and pick out your (fresh) salad for lunch!
+    2. A mystery box of Pokemon cards. (May contain first gen first edition)
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 300 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 300
+            stuff_list.append('grower')
+
+    elif '2' in choice:
+        if dollars_left - 420 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 420
+            stuff_list.append('mystery box')
+
+    elif '3' in choice:
+        print('Did not like those options? Alright.')
+
+if dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. 32 inch Tube TV
+    2. Spark plugs
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 210 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 210
+            stuff_list.append('')
+
+    elif '2' in choice:
+        if dollars_left - 100 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 100
+            stuff_list.append('spark')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
+
+if dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. 4th of July Christmas tree
+    2. Pretty picture frame
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 100 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 80
+            stuff_list.append('tree')
+
+    elif '2' in choice:
+        if dollars_left - 100 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 50
+            stuff_list.append('frame')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
+
+if dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. Surprised filled stocking
+    2. Portable CD player
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 50 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 40
+            stuff_list.append('stocking')
+
+    elif '2' in choice:
+        if dollars_left - 50 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 30
+            stuff_list.append('CD')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
+
+if dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. Cooking book
+    2. Tiny pillow
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 25 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 20
+            stuff_list.append('book')
+
+    elif '2' in choice:
+        if dollars_left - 25 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 15
+            stuff_list.append('pillow')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
+
+if dollars_left <= 10 and dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. Shoe Laces
+    2. Popsicle sticks
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 10 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 6
+            stuff_list.append('laces')
+
+    elif '2' in choice:
+        if dollars_left - 10 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 5
+            stuff_list.append('sticks')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
+
+if dollars_left >= 0:
+    print('Money left to invest: ${}'.format(dollars_left))
+    choice = input('''Choose between the following options.
+
+    1. Random rock from the streets
+    2. Pack of gum
+    3. Neither
+
+Which opportunity would you like to invest in?''')
+
+    if '1' not in choice and '2' not in choice and '3' not in choice:
+        choice = 'nothing'
+        print("Invalid choice. Please try again!")
+
+    if '1' in choice:
+        if dollars_left - 5 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 3
+            stuff_list.append('rock')
+
+    elif '2' in choice:
+        if dollars_left - 5 < 0:
+            print('Sorry, You are out of money!')
+        else:
+            dollars_left -= 3
+            stuff_list.append('gum')
+
+    elif '3' in choice:
+        print('Not a fan? Alright, moving on.')
 
 print("You've finished Part Two!\n")
 
@@ -693,7 +908,10 @@ print("Part Three: PORTFOLIO SUMMARY")
 print("\nCongratulations! You're well on your way to an amazing financial future!")
 print("\nYour personalized portfolio summary:")
 
-print(f"\nYou have ${dollars_left} remaining to invest.")
+if dollars_left < 0:
+    print(f"\nYour remaining balance is in the red, ${dollars_left}.")
+else:
+    print(f"\nYou have ${dollars_left} remaining to invest.")
 
 # 1.2 trillion options
 if 'peas' in stuff_list:
